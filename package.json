@@ -1,0 +1,16 @@
+{
+  "name": "SONETAN",
+  "version": "0.0.1",
+  "licenses": [
+    { "type" : "MIT", "url" : "http://www.opensource.org/licenses/mit-license.php" }
+  ],
+  "dependencies": {
+    "fkling/JSNetworkX": "*"
+  },
+  "devDependencies": {
+    "jsdoc": "*"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

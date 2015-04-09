@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SONETAN demo</title>
+<script src="../src/sonetan.js"></script>
+<script src="data.js"></script>
+<script>var analyzer = new SNA(nodes, edges, { killOrphans: false })</script>
+<style>
+html, body {
+}
+#input {
+  float: left;
+  width: 30%;
+  background: #eef;
+}
+#output {
+  margin-left: 30%;
+  padding-left: 10px;
+}
+</style>
+</head>
+<body>
+  <h1>SONETAN <small id="version"></small> demo</h1>
+  <script>document.querySelector('#version').innerHTML = SNA.version;</script>
+
+  <div id="input">
+    Given the graph:
+    <ul>
+      <li>nodes:
+        <script>document.write(nodes.map(function (n) { return " " + n.id + " " + n.label }))</script>
+      </li>
+      <li>edges:
+        <script>document.write(edges.map(function (e) { return " " + e.source + "->" + e.target }))</script>
+      </li>
+    </ul>
+    with the following adjacency matrix:
+    <ul>
+      <pre><script>document.write(analyzer.displayMatrix(analyzer.adjacencyMatrix()))</script></pre>
+    </ul>
+  </div>
+
+  <div id="output">
+  <section>
+    <h2>General metrics</h2>
+    <div>
+      <ul>
+        <li>SNA.order:
+          <script>document.write(analyzer.order())</script>
+        </li>
+        <li>SNA.size:
+          <script>document.write(analyzer.size())</script>
+        </li>
+        <li>SNA.weighedSize:
+          <script>document.write(analyzer.weighedSize())</script>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Connections</h2>
+    <div>
+      <ul>
+        TODO
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Distributions</h2>
+    <div>
+      <ul>
+        <li>SNA.degreeCentrality:
+          <script>document.write(analyzer.degreeCentrality())</script>
+        </li>
+        <li>SNA.density:
+          <script>document.write(analyzer.density())</script>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Segmentation</h2>
+    <div>
+      <ul>
+        TODO
+      </ul>
+    </div>
+  </section>
+
+</body>
+</html>
