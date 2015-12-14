@@ -21,7 +21,7 @@ In its current form, it can help on *General metrics* and *Distributions* areas.
 
 ## Examples
 
-See the `examples` directory.
+The the [examples/demo.html](https://rawgit.com/sonetin/sonetan/master/examples/demo.html)
 
 
 ## License
